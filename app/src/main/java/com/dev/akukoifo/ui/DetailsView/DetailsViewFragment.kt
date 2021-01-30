@@ -24,6 +24,7 @@ class DetailsViewFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        requireActivity().actionBar?.setHomeButtonEnabled(true)
         // Inflate the layout for this fragment
         binding = FragmentDetailsViewBinding.inflate(inflater, container, false)
         val view = binding.root
@@ -36,5 +37,6 @@ class DetailsViewFragment : Fragment() {
 
         return view
     }
+
 
 }

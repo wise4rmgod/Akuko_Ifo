@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         MobileAds.initialize(this) {}
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.setHomeButtonEnabled(true)
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
@@ -49,6 +50,7 @@ class MainActivity : AppCompatActivity() {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         val ty = item.itemId
+        if (ty == R.id.navigation_home)
         if (ty == R.id.addstoriesjokesriddles) {
             findNavController(R.id.nav_host_fragment).navigate(R.id.addFragment)
 
