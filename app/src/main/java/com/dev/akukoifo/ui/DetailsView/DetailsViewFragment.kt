@@ -1,19 +1,13 @@
 package com.dev.akukoifo.ui.DetailsView
 
-import android.app.PictureInPictureParams
-import android.content.res.Configuration
-import android.graphics.Point
-import android.os.Build
 import android.os.Bundle
-import android.util.Log
-import android.util.Rational
-import android.view.Display
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.dev.akukoifo.MainActivity
 import com.dev.akukoifo.databinding.FragmentDetailsViewBinding
+import kotlinx.android.synthetic.main.fragment_details_view.*
 
 
 class DetailsViewFragment : Fragment() {
@@ -28,6 +22,7 @@ class DetailsViewFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentDetailsViewBinding.inflate(inflater, container, false)
         val view = binding.root
+        (activity as MainActivity?)?.setSupportActionBar(binding.toolbar)
 
 
         binding.playvideo.setOnClickListener {

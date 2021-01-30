@@ -2,6 +2,7 @@ package com.dev.akukoifo.util
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
+import com.dev.akukoifo.firebase.firestore.CloudFirestoredb
 import com.dev.akukoifo.model.AkukoDataClass
 
 class RetrieveClass {

@@ -2,11 +2,8 @@ package com.dev.akukoifo.util
 
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
-import com.dev.akukoifo.model.AkukoDataClass
 import com.dev.akukoifo.model.WordDataClasss
-import com.dev.akukoifo.util.CloudFirestoredb
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
+import com.dev.akukoifo.firebase.firestore.CloudFirestoredb
 
 object TranslateLang {
     val usersDetails = MutableLiveData<List<WordDataClasss>>()

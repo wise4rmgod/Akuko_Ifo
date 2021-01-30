@@ -1,4 +1,4 @@
-package com.dev.akukoifo.util
+package com.dev.akukoifo.firebase.firestore
 
 import android.content.Context
 import android.util.Log

@@ -6,9 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
-import com.dev.akukoifo.R
 import com.dev.akukoifo.databinding.FragmentAddBinding
-import com.dev.akukoifo.util.CloudFirestoredb
+import com.dev.akukoifo.firebase.firestore.CloudFirestoredb
 import kotlinx.android.synthetic.main.fragment_add.view.*
 
 

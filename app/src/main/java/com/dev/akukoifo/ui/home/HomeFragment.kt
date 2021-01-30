@@ -9,7 +9,7 @@ import androidx.lifecycle.Observer
 import com.dev.akukoifo.R
 import com.dev.akukoifo.adapters.akukuAdapter
 import com.dev.akukoifo.model.AkukoDataClass
-import com.dev.akukoifo.util.CloudFirestoredb
+import com.dev.akukoifo.firebase.firestore.CloudFirestoredb
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
