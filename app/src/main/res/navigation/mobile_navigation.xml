@@ -57,6 +57,16 @@
         <action
             android:id="@+id/action_detailsViewFragment_to_storyVideoFragment"
             app:destination="@id/storyVideoFragment" />
+        <action
+            android:id="@+id/action_detailsViewFragment_to_navigation_home"
+            app:launchSingleTop="true"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_detailsViewFragment_to_navigation_dashboard"
+            app:destination="@id/navigation_dashboard" />
+        <action
+            android:id="@+id/action_detailsViewFragment_to_navigation_notifications"
+            app:destination="@id/navigation_notifications" />
     </fragment>
     <fragment
         android:id="@+id/storyVideoFragment"

@@ -10,6 +10,8 @@ import com.dev.akukoifo.R
 import com.dev.akukoifo.adapters.akukuAdapter
 import com.dev.akukoifo.model.AkukoDataClass
 import com.dev.akukoifo.firebase.firestore.CloudFirestoredb
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activitytoolbar.view.*
 import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
@@ -21,6 +23,8 @@ class HomeFragment : Fragment() {
     ): View? {
 
         val root = inflater.inflate(R.layout.fragment_home, container, false)
+        activity?.includetoolbar?.atoolbar?.title = "Home"
+        activity?.includetoolbar?.atoolbar?.navigationIcon = null
         // retrieve value from Cloud firestore database
         CloudFirestoredb.retrieveakuko()
         CloudFirestoredb.akukousersDetails.observe(viewLifecycleOwner, Observer {
