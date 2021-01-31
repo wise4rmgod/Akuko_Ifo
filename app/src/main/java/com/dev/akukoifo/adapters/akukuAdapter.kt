@@ -2,11 +2,14 @@ package com.dev.akukoifo.adapters
 
 import android.content.Context
 import android.content.Intent
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.core.os.bundleOf
 import androidx.navigation.findNavController
+import androidx.navigation.navOptions
 import androidx.recyclerview.widget.RecyclerView
 import com.dev.akukoifo.R
 import com.dev.akukoifo.databinding.DesignlistBinding
@@ -43,8 +46,15 @@ class akukuAdapter(
         holder.description.text = dataModel.description
 
         holder.itemView.setOnClickListener {
+
+            val bundle = bundleOf()
+            bundle.putString("title", dataModel.title)
+            bundle.putString("description", dataModel.description)
+            bundle.putInt("page", 1)
+
+            //  val videourl = bundleOf("amount" to dataModel.videourl)
             holder.itemView.findNavController()
-                .navigate(R.id.action_navigation_home_to_detailsViewFragment)
+                .navigate(R.id.action_navigation_home_to_detailsViewFragment, bundle)
         }
 
     }

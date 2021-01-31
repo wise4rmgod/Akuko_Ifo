@@ -39,6 +39,13 @@ class DetailsViewFragment : Fragment() {
             findNavController()
                 .navigate(R.id.action_detailsViewFragment_to_navigation_home)
         }
+        /** arguments.apply {
+        binding.igbotitle.text = this?.getString("title")
+        } **/
+
+        binding.igbotitle.text = arguments?.getString("title")
+        binding.igbodescription.text = arguments?.getString("description")
+
 
         /**    binding.toolbar.setOnMenuItemClickListener {
         it
@@ -53,8 +60,6 @@ class DetailsViewFragment : Fragment() {
         }
         }
         }  **/
-
-
         binding.playvideo.setOnClickListener {
 
         }
