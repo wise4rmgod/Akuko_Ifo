@@ -23,7 +23,6 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
         // retrieve value from Cloud firestore database
         CloudFirestoredb.retrieveakuko()
-
         CloudFirestoredb.akukousersDetails.observe(viewLifecycleOwner, Observer {
 
             root.akukorecycler.adapter =

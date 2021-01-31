@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activitytoolbar.view.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -20,8 +21,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         MobileAds.initialize(this) {}
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.hide()
+        includetoolbar.atoolbar.inflateMenu(R.menu.main)
+        includetoolbar.atoolbar.title = "Igbo Stories/Jokes"
+
         val adRequest = AdRequest.Builder().build()
         adView.loadAd(adRequest)
 
@@ -51,10 +54,10 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         val ty = item.itemId
         if (ty == R.id.navigation_home)
-        if (ty == R.id.addstoriesjokesriddles) {
-            findNavController(R.id.nav_host_fragment).navigate(R.id.addFragment)
+            if (ty == R.id.addstoriesjokesriddles) {
+                findNavController(R.id.nav_host_fragment).navigate(R.id.addFragment)
 
-        }
+            }
 
         if (ty == R.id.langauge) {
             findNavController(R.id.nav_host_fragment).navigate(R.id.languageTranslatorFragment)
